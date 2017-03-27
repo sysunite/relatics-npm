@@ -16,7 +16,7 @@ class RelaticsReport
       method: 'POST'
       headers:
         'Content-Type'  : 'application/soap+xml; charset=utf-8; action="http://www.relatics.com/GetResult"'
-        'Content-Length': envelope.length      
+        'Content-Length': envelope.length
       body: envelope
       uri: @url
       resolveWithFullResponse: true
