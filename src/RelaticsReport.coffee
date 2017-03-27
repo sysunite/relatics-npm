@@ -3,7 +3,7 @@ request  = require('request-promise')
 
 class RelaticsReport
   
-  constructor: (@url, @workspace, @operationName, @entryCode) ->
+  constructor: (@url, @workspace, @entryCode, @operationName) ->
     @parameters = []
 
   addParameter: (name, value) ->
