@@ -1,8 +1,9 @@
 RelaticsReport = require('./RelaticsReport')
 
 class RelaticsImport extends RelaticsReport
-  
-  constructor: (@url, @workspace, @entryCode, @operationName) ->  
+
+  constructor: (args...) ->
+    super(args...)
     @action     = 'http://www.relatics.com/Import'
     @envelope   = require('./ImportSoapEnvelope')
     @fileName   = null
