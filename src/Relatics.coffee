@@ -1,6 +1,7 @@
 class Relatics
   
   constructor: ->
-    @Report = require('./RelaticsReport')
+    @Export = require('./RelaticsExport')
+    @Import = require('./RelaticsImport')
   
 module.exports = new Relatics()

@@ -4,18 +4,14 @@ request  = require('request-promise')
 class RelaticsReport
   
   constructor: (@url, @workspace, @entryCode, @operationName) ->
-    @parameters = []
-
-  addParameter: (name, value) ->
-    @parameters.push({name, value})
-
-  fetch: ->
-    envelope = Mustache.render(require('./SoapEnvelopeTemplate'), @)
-
+ 
+  run: ->
+    envelope = Mustache.render(@envelope, @)
+    
     request(
       method: 'POST'
       headers:
-        'Content-Type'  : 'application/soap+xml; charset=utf-8; action="http://www.relatics.com/GetResult"'
+        'Content-Type'  : """application/soap+xml; charset=utf-8; action="#{@action}" """
         'Content-Length': envelope.length
       body: envelope
       uri: @url

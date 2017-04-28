@@ -1,0 +1,13 @@
+RelaticsReport = require('./RelaticsReport')
+
+class RelaticsExport extends RelaticsReport
+  
+  constructor: (@url, @workspace, @entryCode, @operationName) ->
+    @action     = 'http://www.relatics.com/GetResult'
+    @envelope   = require('./ExportSoapEnvelope')
+    @parameters = []
+    
+  addParameter: (name, value) ->
+    @parameters.push({name, value})
+    
+module.exports = RelaticsExport
