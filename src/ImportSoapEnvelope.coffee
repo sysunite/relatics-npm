@@ -18,9 +18,7 @@ module.exports =
       </Authentication>
      
       <Filename>{{fileName}}</Filename>
- 
       <Data>{{importData}}</Data>
-
     </Import>
   </s:Body>
 </s:Envelope>

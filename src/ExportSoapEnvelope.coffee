@@ -4,38 +4,26 @@ module.exports =
   <s:Body>
     <GetResult xmlns="http://www.relatics.com/">
       <Operation>{{operationName}}</Operation>
+
       <Identification>
         <Relatics:Identification xmlns:Relatics="http://www.relatics.com/">
           <Relatics:Workspace>{{workspace}}</Relatics:Workspace>
         </Relatics:Identification>
       </Identification>
-      <Parameters>
-          <Relatics:Parameters xmlns:Relatics="http://www.relatics.com/">
-                                      
-            {{#parameters}}
-            <Relatics:Parameter Name="{{name}}" Value="{{value}}"/>
-            {{/parameters}}
-          
-          </Relatics:Parameters>
-      </Parameters>
-
-      {{#isImport}}
-      <Filename>
-        {{fileName}}
-      </Filename>
- 
-      <Data>
-        {{importData}}
-       </Data>
-      {{/isImport}}
-
-
 
       <Authentication>
         <Relatics:Authentication xmlns:Relatics="http://www.relatics.com/">
           <Relatics:Entrycode>{{entryCode}}</Relatics:Entrycode>
         </Relatics:Authentication>
       </Authentication>
+
+      <Parameters>
+          <Relatics:Parameters xmlns:Relatics="http://www.relatics.com/">
+            {{#parameters}}
+            <Relatics:Parameter Name="{{name}}" Value="{{value}}"/>
+            {{/parameters}}
+          </Relatics:Parameters>
+      </Parameters>
     </GetResult>
   </s:Body>
 </s:Envelope>
