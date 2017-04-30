@@ -1,3 +1,4 @@
+base64         = require('base-64')
 RelaticsReport = require('./RelaticsReport')
 
 class RelaticsImport extends RelaticsReport
@@ -11,6 +12,6 @@ class RelaticsImport extends RelaticsReport
     
   setImportData: (fileName, importData) ->
     @fileName   = fileName
-    @importData = importData
+    @importData = base64.encode(importData)
 
 module.exports = RelaticsImport
