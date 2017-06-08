@@ -11,7 +11,7 @@ class RelaticsReport
     request(
       method: 'POST'
       headers:
-        'Content-Type'  : """application/soap+xml; charset=utf-8; action="#{@action}" """
+        'Content-Type'  : 'application/soap+xml; charset=utf-8'
         'Content-Length': envelope.length
       body: envelope
       uri: @url

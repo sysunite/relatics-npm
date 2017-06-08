@@ -5,7 +5,7 @@ class RelaticsImport extends RelaticsReport
 
   constructor: (args...) ->
     super(args...)
-    @action     = 'http://www.relatics.com/Import'
+#    @action     = 'http://www.relatics.com/Import'
     @envelope   = require('./ImportSoapEnvelope')
     @fileName   = null
     @importData = null

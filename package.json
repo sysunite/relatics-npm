@@ -1,6 +1,6 @@
 {
   "name": "relatics",
-  "version": "1.1.2",
+  "version": "1.1.8",
   "description": "Utilities for interacting with Relatics",
   "main": "lib/Relatics.js",
   "scripts": {
