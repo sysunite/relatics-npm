@@ -5,10 +5,10 @@ class RelaticsImport extends RelaticsReport
 
   constructor: (args...) ->
     super(args...)
-#    @action     = 'http://www.relatics.com/Import'
     @envelope   = require('./ImportSoapEnvelope')
     @fileName   = null
     @importData = null
+    @parameters = []
 
   setImportData: (fileName, importData) ->
     @fileName   = fileName
@@ -17,5 +17,9 @@ class RelaticsImport extends RelaticsReport
   setImportDataBase64: (fileName, importData) ->
     @fileName   = fileName
     @importData = importData
+
+  addParameter: (name, value) ->
+    @parameters.push({name, value})
+    @
 
 module.exports = RelaticsImport

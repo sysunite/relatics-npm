@@ -7,7 +7,7 @@ class RelaticsReport
  
   run: ->
     envelope = Mustache.render(@envelope, @)
-    
+    console.log envelope 
     request(
       method: 'POST'
       headers:

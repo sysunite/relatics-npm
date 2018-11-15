@@ -17,6 +17,13 @@ module.exports =
       </Authentication>
       <Filename>{{fileName}}</Filename>
       <Data>{{{importData}}}</Data>
+      <Parameters>
+          <Parameters>
+            {{#parameters}}
+            <Parameter Name="{{name}}" Value="{{value}}"/>
+            {{/parameters}}
+          </Parameters>
+      </Parameters>
     </Import>
   </s:Body>
 </s:Envelope>
