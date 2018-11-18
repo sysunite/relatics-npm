@@ -1,4 +1,4 @@
-module.exports = 
+module.exports =
 """
 <?xml version="1.0" encoding="utf-8"?>
 <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope">
