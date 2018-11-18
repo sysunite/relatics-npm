@@ -19,14 +19,13 @@
   "homepage": "https://github.com/sysunite/relatics-npm#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.2.0",
-    "coffee-script": "^1.12.4"
+    "coffee-script": "^1.12.4",
+    "mocha": "^3.2.0"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "base-64": "^0.1.0",
     "bluebird": "^3.5.0",
-    "mustache": "^2.3.0",
-    "request": "^2.81.0",
-    "request-promise": "^4.2.0"
+    "mustache": "^2.3.0"
   }
 }
