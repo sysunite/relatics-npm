@@ -3,7 +3,7 @@ axios    = require('axios')
 
 class RelaticsReport
 
-  constructor: (@url, @workspace, @entryCode, @operationName) ->
+  constructor: (@url, @workspace, @entryCode, @operationName, @timeout) ->
 
   run: ->
     envelope = Mustache.render(@envelope, @)
@@ -14,6 +14,7 @@ class RelaticsReport
         'Content-Length': envelope.length
       data: envelope
       url: @url
+      timeout: @timeout
     ).then((response) ->
       response.data
     )
